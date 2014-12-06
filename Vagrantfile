@@ -82,7 +82,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     
     dev.vm.provision :chef_solo do |chef|
       chef.cookbooks_path = "chef-repo/cookbooks"
-      #chef.add_recipe "java"
+      chef.add_recipe "java"
+      chef.add_recipe "drill"
       #chef.add_recipe "postgresql"
       #chef.add_recipe "postgresql::server"
       #chef.add_recipe "elasticsearch::default"
